@@ -3,7 +3,9 @@
 
 <template>
   <div class="view-con">
-    <h1>home</h1>
+    <h1 class="bg-white font-italic">
+      home
+    </h1>
   </div>
 </template>
 
