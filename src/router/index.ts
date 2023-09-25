@@ -1,6 +1,19 @@
+import type { RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import App from '@/App.vue'
 
-import { createRouter } from "vue-router"
+const routes: Array<RouteRecordRaw> = [{
+  path: '/',
+  component: App,
+  children: [
+    {
+      path: '',
+      component: () => import('@/views/home.vue'),
+    },
+  ],
+}]
 
-const routes = []
-
-export const router = createRouter(routes)
+export const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
